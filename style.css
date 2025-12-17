@@ -1,0 +1,177 @@
+/* 기본 스타일 초기화 */
+body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+#dashboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* 헤더 스타일 */
+#main-header {
+    text-align: center;
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+#main-header h1 {
+    font-size: 2.5em;
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* 주요 정보 카드 스타일 */
+.info-card {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #007bff;
+}
+
+.info-card h2 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.5em;
+    border-bottom: 1px dashed #a0c3e1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.title-item {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.title-item strong {
+    color: #34495e;
+    font-weight: 600;
+}
+
+/* 연대기 섹션 스타일 */
+#timeline-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+#timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.timeline-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-card.expanded {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.card-header {
+    padding: 15px 20px;
+    background-color: #ecf0f1;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-card.expanded .card-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card-period {
+    font-weight: 600;
+    color: #666;
+}
+
+.timeline-card.expanded .card-period {
+    color: #ffffff;
+}
+
+.toggle-icon {
+    font-size: 1.2em;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+/* 상세 내용 스타일 */
+.card-details {
+    padding: 0 20px;
+    max-height: 500px;
+    /* 초기에는 숨겨져야 하므로 큰 값 설정 */
+    transition: all 0.5s ease-out;
+}
+
+.card-details.hidden {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+.card-details ul {
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    border-top: 1px solid #eee;
+}
+
+.card-details li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #e1e1e1;
+    line-height: 1.4;
+}
+
+.card-details li:last-child {
+    border-bottom: none;
+}
+
+.card-details strong {
+    color: #555;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.source {
+    font-size: 0.8em;
+    color: #999;
+    margin-left: 5px;
+}
